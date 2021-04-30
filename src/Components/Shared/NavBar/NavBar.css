@@ -1,0 +1,33 @@
+.NavBar {
+	height: 3rem;
+	color: var(--primary);
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	'logoHolder infoHolder';
+}
+
+.NavBar .logoHolder {
+	grid-area: logoHolder;
+	margin-right: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	justify-content: center;
+	width: 10rem;
+}
+
+.NavBar .logoHolder .bar {
+	justify-self: center;
+}
+
+.NavBar .logoHolder .logo > img {
+	height: 2rem;
+}
+
+.NavBar .infoHolder {
+	grid-area: infoHolder;
+	margin-left: auto;
+}
