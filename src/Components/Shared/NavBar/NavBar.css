@@ -1,12 +1,28 @@
+.NavBarHolder {
+	position: relative;
+}
+
+.NavBarHolder .avatarHolder {
+	position: absolute;
+	z-index: 999;
+	right: var(--margin);
+	top: 20vh;
+}
+
+.NavBarHolder .avatarHolder img {
+	width: 350px;
+}
+
 .NavBar {
-	height: 3rem;
+	background-color: var(--dark);
+	height: 5rem;
 	color: var(--primary);
 	margin-left: var(--margin);
 	margin-right: var(--margin);
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr  1fr;
 	grid-template-areas: 
-	'logoHolder infoHolder';
+	'logoHolder avatarHolder infoHolder';
 }
 
 .NavBar .logoHolder {
@@ -17,6 +33,10 @@
 	align-items: center;
 	justify-content: center;
 	width: 10rem;
+}
+
+.NavBar .avatarHolder {
+	grid-area: avatarHolder;
 }
 
 .NavBar .logoHolder .bar {

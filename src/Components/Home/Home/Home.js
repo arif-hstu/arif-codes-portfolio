@@ -6,7 +6,6 @@ import Intro from '../Intro/Intro';
 function Home() {
 	return (
 		<div className='Home'>
-			<NavBar />
 			<Intro />
 		</div>
 	)

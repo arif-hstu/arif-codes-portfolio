@@ -1,3 +1,25 @@
 .Intro {
-	background-color: tomato;
+	margin-left: var(--margin);
+	color: var(--primary);
+	display: grid;
+	grid-template-columns: 1fr 0.7fr;
+	align-items: center;
+	height: 100%;
+	position: relative;
+}
+
+.Intro{
+  background-image: radial-gradient(circle, #383f4d 0%, #383f4d 10%, #1c1d21 60%);
+  
+}
+
+.Intro h1 {
+	font-family: var(--font-family);
+	font-size: var(--font-huge);
+}
+
+.Intro h1:first-child {
+	color: var(--white);
+	margin-bottom: -30px;
+	margin-top: -100px;
 }
