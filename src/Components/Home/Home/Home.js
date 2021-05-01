@@ -11,14 +11,10 @@ function Home() {
 	const history = useHistory();
 	const [isNext, setIsNext] = useContext(ChangeRouteContext);
 	useEffect(() => {
-
-		if (isNext === true) {
-			console.log('change')
+		if (isNext === 'next') {
 			history.push('/expertise');
-		} else {
-			console.log('no chnage');
-		}
-
+			setIsNext('stable');
+		} 
 	}, [isNext]);
 
 	// Framer motion configuration

@@ -16,11 +16,10 @@ function Projects() {
 	setRouteLocation(history.location.pathname);
 
 	useEffect(() => {
-		if (isNext === true) {
-			history.push('/projects');
-		} else {
-			history.push('/');
-		}
+		if (isNext === 'prev') {
+			history.push('/expertise');
+			setIsNext('stable');
+		} 
 	}, [isNext]);
 
 	const transition = {
@@ -31,7 +30,6 @@ function Projects() {
 		duration: 1,
 		ease: [0.43, 0.13, 0.23, 0.96]
 	};
-
 
 	const divVariants = {
 		exit: { opacity: 0, transition },

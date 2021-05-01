@@ -16,11 +16,13 @@ function Expert() {
 	setRouteLocation(history.location.pathname);
 
 	useEffect(() => {
-		if (isNext === true) {
-			history.push('/expertise');
-		} else {
-			history.push('/');
-		}
+		if (isNext === 'next') {
+			history.push('/projects');
+			setIsNext('stable');
+		} else if (isNext ==='prev'){
+			history.push('/')
+			setIsNext('stable');
+		} 
 	}, [isNext]);
 
 	const transition = {

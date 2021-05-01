@@ -23,7 +23,7 @@ export const RouteLocationContext = createContext();
 function App() {
   const [routeLocation, setRouteLocation] = useState('');
 
-  const [isNext, setIsNext] = useState(false);
+  const [isNext, setIsNext] = useState('stable');
   function changeRoute(event) {
     let scale = 1;
     let prevScale = scale;
@@ -32,10 +32,10 @@ function App() {
     // scale = Math.min(Math.max(.125, scale), 4);
 
     if (prevScale > scale) {
-      setIsNext(true);
+      setIsNext('next');
 
     } else {
-      setIsNext(false);
+      setIsNext('prev');
     }
   }
   return (
@@ -63,14 +63,5 @@ function App() {
 }
 
 export default App;
-
-/*<Switch>
-      <Route exact path='/'>
-       <Home />
-      </Route>
-      <Route exact path='/expertise'>
-       <Expert />
-      </Route>
-     </Switch>*/
 
 
