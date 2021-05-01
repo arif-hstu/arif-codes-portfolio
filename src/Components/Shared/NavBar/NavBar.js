@@ -1,6 +1,7 @@
 import React from 'react';
 import './NavBar.css';
 import logo from '../../../resources/images/awLogo.svg';
+import speechBubble from '../../../resources/images/speech-bubble.svg'
 
 function NavBar() {
 	return (
@@ -13,19 +14,18 @@ function NavBar() {
 					|
 				</div>
 				<div className="menu">
-					Menu
+					<p>MENU</p>
 				</div>
 			</div>
 			<div className="infoHolder">
 				<div className="resume">
-					|
+					<button className='primaryBtn'>
+						RESUME
+					</button>
 				</div>
-				<div className="messageIcon">
-					<img src={messageIcon} alt="Message" />
-				</div>
-
 				<div className="hire">
-					HIRE ME
+					<img src={speechBubble} alt="Message" />
+					<p>HIRE ME</p>
 				</div>
 			</div>
 		</div>

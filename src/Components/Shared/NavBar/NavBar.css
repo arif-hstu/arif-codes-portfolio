@@ -30,4 +30,27 @@
 .NavBar .infoHolder {
 	grid-area: infoHolder;
 	margin-left: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	justify-content: center;
+	width: 15rem;
+}
+
+.NavBar .infoHolder > * {
+	margin: auto;
+}
+
+.NavBar .infoHolder img {
+	height: 2rem;
+}
+
+.NavBar .infoHolder .hire {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.NavBar .infoHolder img {
+	margin-right: 5px;
 }

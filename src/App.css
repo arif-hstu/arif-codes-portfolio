@@ -23,5 +23,16 @@
 };
 
 body {
-  color: red;
+  color: var(--dark);
 }
+
+.primaryBtn, .primaryBtn:focus {
+  height: 1.5rem;
+  color: var(--dark);
+  background-color: var(--primary);
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
