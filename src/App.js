@@ -16,6 +16,7 @@ import NavBar from './Components/Shared/NavBar/NavBar';
 import Home from './Components/Home/Home/Home';
 import Expert from './Components/Expert/Expert/Expert';
 import Projects from './Components/Projects/Projects/Projects';
+import Eye from './Components/Eye/Eye';
 
 export const ChangeRouteContext = createContext();
 export const RouteLocationContext = createContext();
@@ -51,6 +52,7 @@ function App() {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/expertise" component={Expert} />
                     <Route exact path="/projects" component={Projects} />
+                    <Route exact path="/eye" component={Eye} />
                   </Switch>
                 </AnimatePresence>
               )}

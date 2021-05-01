@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 import './NavBar.css';
 import logo from '../../../resources/images/awLogo.svg';
 import speechBubble from '../../../resources/images/speech-bubble.svg';
-import avatar from '../../../resources/images/playerAvatar.svg';
+import avatar from '../../../resources/images/avatarPurple.svg';
 
 import { RouteLocationContext } from '../../../App';
 
