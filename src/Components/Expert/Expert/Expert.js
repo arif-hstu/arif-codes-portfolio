@@ -1,26 +1,24 @@
 import React, { useContext, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
+import './Expert.css';
 
-import './Home.css';
-import NavBar from '../../Shared/NavBar/NavBar';
-import Intro from '../Intro/Intro';
+import ExpertInfo from '../ExpertInfo/ExpertInfo';
 import { ChangeRouteContext } from '../../../App';
+import { motion } from 'framer-motion';
 
-function Home() {
+function Expert() {
 	const history = useHistory();
 	const [isNext, setIsNext] = useContext(ChangeRouteContext);
-	useEffect(() => {
 
-		if (isNext === true) {
-			console.log('change')
+	useEffect(() => {
+		if(isNext === true) {
 			history.push('/expertise');
 		} else {
-			console.log('no chnage');
+			history.push('/');
 		}
-
 	}, [isNext]);
 
-	// Framer motion configuration
+
 	const transition = {
 		duration: 1,
 		ease: [0.43, 0.13, 0.23, 0.96]
@@ -34,11 +32,15 @@ function Home() {
 			transition
 		}
 	};
+
 	return (
-		<div className='Home'>
-			<Intro />
+		<div className='Expert'>
+		<motion.div className="single" initial="exit" animate="enter" exit="exit" variants={divVariants}>
+			<ExpertInfo />
+		</motion.div>
+
 		</div>
 	)
 }
 
-export default Home;
+export default Expert;

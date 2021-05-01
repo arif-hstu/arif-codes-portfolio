@@ -1,13 +1,16 @@
 import React from 'react';
-import './Intro.css';
+import { motion } from 'framer-motion';
 
-function Intro() {
-	
+import './ExpertInfo.css';
+
+function ExpertInfo() {
+
+
 	return (
-		<div className='Intro'>
+		<div className='ExpertInfo'>
 			<div className='introHolder'>
-				<h1>HELLO, I AM</h1>
-				<h1>ARIFUR RAHMAN</h1>
+				<h1>Enthusiastic Fron-End Developer</h1>
+				<h1>Graphic Designer</h1>
 				<p className='smallPara'>
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint inventore repudiandae ipsum aliquid hic sequi
 				</p>
@@ -19,4 +22,4 @@ function Intro() {
 	)
 }
 
-export default Intro;
+export default ExpertInfo;
