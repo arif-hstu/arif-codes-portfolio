@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import './ExpertInfo.css';
+import './ProjectGallery.css';
 import bar from '../../../resources/images/bar.png'
 
-function ExpertInfo() {
+function ProjectGallery() {
 
 
 	return (
-		<div className=" ExpertInfo">
+		<div className=" ProjectGallery">
 			<div className='titleHolder'>
-				<h1>Enthusiastic Front-End Web Developer</h1>
+				<h1>THIS IS PROJECTS GALLERY</h1>
 				<h1>Graphic Designer</h1>
 				<p className='smallPara'>
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint inventore repudiandae ipsum aliquid hic sequi
@@ -51,4 +51,4 @@ function ExpertInfo() {
 	)
 }
 
-export default ExpertInfo;
+export default ProjectGallery;

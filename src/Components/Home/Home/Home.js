@@ -5,6 +5,7 @@ import './Home.css';
 import NavBar from '../../Shared/NavBar/NavBar';
 import Intro from '../Intro/Intro';
 import { ChangeRouteContext } from '../../../App';
+import { motion } from 'framer-motion';
 
 function Home() {
 	const history = useHistory();
@@ -25,19 +26,23 @@ function Home() {
 		duration: 1,
 		ease: [0.43, 0.13, 0.23, 0.96]
 	};
+	const transition2 = {
+		duration: 1,
+		ease: [0.96, 0.13, 0.23, 0.43]
+	}
 
 	const divVariants = {
-		exit: { y: "50%", opacity: 0, transition },
+		exit: {opacity: 0, transition },
 		enter: {
 			y: "0%",
 			opacity: 1,
-			transition
+			transition2
 		}
 	};
 	return (
-		<div className='Home'>
+		<motion.div className='Home' initial="exit" animate="enter" exit="exit" variants={divVariants}>
 			<Intro />
-		</div>
+		</motion.div>
 	)
 }
 

@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import './NavBar.css';
 import logo from '../../../resources/images/awLogo.svg';
 import speechBubble from '../../../resources/images/speech-bubble.svg';
 import avatar from '../../../resources/images/playerAvatar.svg';
 
+import { RouteLocationContext } from '../../../App';
+
 function NavBar() {
+	const [routeLocation, setRouteLocation] = useContext(RouteLocationContext);
+	const [styleOfAvatar, setStyleOfAvatar] = useState({
+		visibility: 'visible'
+	});
+
+	useEffect(() => {
+		if (routeLocation === '/' || routeLocation === '') {
+			setStyleOfAvatar({
+				visibility: 'visible'
+			});
+		} else {
+			setStyleOfAvatar({
+				visibility: 'hidden'
+			});
+		}
+	}, [routeLocation]);
+
+	console.log('[routeLocation]:', routeLocation, styleOfAvatar);
+
 	return (
 		<div className='NavBarHolder'>
 			<div className='NavBar'>
@@ -21,7 +44,7 @@ function NavBar() {
 				</div>
 
 				<div className="avatarHolder">
-					<img src={avatar} alt="Avatar" />
+					<img style={styleOfAvatar } src={avatar} alt="Avatar" />
 				</div>
 
 				<div className="infoHolder">

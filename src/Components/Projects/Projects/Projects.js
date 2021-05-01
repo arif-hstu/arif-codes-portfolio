@@ -1,13 +1,13 @@
 import React, { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import './Expert.css';
+import './Projects.css';
 
-import ExpertInfo from '../ExpertInfo/ExpertInfo';
+import ProjectGallery from '../ProjectGallery/ProjectGallery';
 import { RouteLocationContext, ChangeRouteContext } from '../../../App';
 
 import { motion } from 'framer-motion';
 
-function Expert() {
+function Projects() {
 	const history = useHistory();
 
 	const [isNext, setIsNext] = useContext(ChangeRouteContext);
@@ -17,7 +17,7 @@ function Expert() {
 
 	useEffect(() => {
 		if (isNext === true) {
-			history.push('/expertise');
+			history.push('/projects');
 		} else {
 			history.push('/');
 		}
@@ -43,10 +43,10 @@ function Expert() {
 	};
 
 	return (
-		<motion.div className='Expert' initial="exit" animate="enter" exit="exit" variants={divVariants}>
-			<ExpertInfo />
+		<motion.div className='Projects' initial="exit" animate="enter" exit="exit" variants={divVariants}>
+			<ProjectGallery />
 		</motion.div>
 	)
 }
 
-export default Expert;
+export default Projects;

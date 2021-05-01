@@ -1,4 +1,5 @@
 import { useState, createContext } from 'react';
+
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -14,10 +15,14 @@ import { AnimatePresence } from 'framer-motion';
 import NavBar from './Components/Shared/NavBar/NavBar';
 import Home from './Components/Home/Home/Home';
 import Expert from './Components/Expert/Expert/Expert';
+import Projects from './Components/Projects/Projects/Projects';
 
 export const ChangeRouteContext = createContext();
+export const RouteLocationContext = createContext();
 
 function App() {
+  const [routeLocation, setRouteLocation] = useState('');
+
   const [isNext, setIsNext] = useState(false);
   function changeRoute(event) {
     let scale = 1;
@@ -36,19 +41,22 @@ function App() {
   return (
     <div id='App' onWheel={changeRoute} className="App">
       <ChangeRouteContext.Provider value={[isNext, setIsNext]}>
-        <Router>
-          <NavBar />
-          <Route
-            render={({ location }) => (
-              <AnimatePresence exitBeforeEnter initial={false}>
-                <Switch location={location} key={location.pathname}>
-                  <Route exact path="/" component={Home} />
-                  <Route exact path="/expertise" component={Expert} />
-                </Switch>
-              </AnimatePresence>
-            )}
+        <RouteLocationContext.Provider value={[routeLocation, setRouteLocation]}>
+          <Router>
+            <NavBar />
+            <Route
+              render={({ location }) => (
+                <AnimatePresence exitBeforeEnter initial={false}>
+                  <Switch location={location} key={location.pathname}>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/expertise" component={Expert} />
+                    <Route exact path="/projects" component={Projects} />
+                  </Switch>
+                </AnimatePresence>
+              )}
             />
-        </Router>
+          </Router>
+        </RouteLocationContext.Provider>
       </ChangeRouteContext.Provider>
     </div>
   );
@@ -57,12 +65,12 @@ function App() {
 export default App;
 
 /*<Switch>
-        <Route exact path='/'>
-          <Home />
-        </Route>
-        <Route exact path='/expertise'>
-          <Expert />
-        </Route>
-       </Switch>*/
+      <Route exact path='/'>
+       <Home />
+      </Route>
+      <Route exact path='/expertise'>
+       <Expert />
+      </Route>
+     </Switch>*/
 
 
