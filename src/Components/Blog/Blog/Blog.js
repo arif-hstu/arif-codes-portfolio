@@ -1,13 +1,13 @@
 import React, { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import './Projects.css';
+import './Blog.css';
 
-import ProjectGallery from '../ProjectGallery/ProjectGallery';
+import BlogGallery from '../BlogGallery/BlogGallery';
 import { RouteLocationContext, ChangeRouteContext } from '../../../App';
 
 import { motion } from 'framer-motion';
 
-function Projects() {
+function Blog() {
 	const history = useHistory();
 
 	const [isNext, setIsNext] = useContext(ChangeRouteContext);
@@ -17,13 +17,13 @@ function Projects() {
 
 	useEffect(() => {
 		if (isNext === 'prev') {
-			history.push('/expertise');
+			history.push('/projects');
 			setIsNext('stable');
 		}
 		if (isNext === 'next') {
-			history.push('/blog');
-			setIsNext('/stable');
-		}
+			history.push('/contact');
+			setIsNext('stable');
+		} 
 	}, [isNext]);
 
 	const transition = {
@@ -45,10 +45,10 @@ function Projects() {
 	};
 
 	return (
-		<motion.div className='Projects' initial="exit" animate="enter" exit="exit" variants={divVariants}>
-			<ProjectGallery />
+		<motion.div className='Blog' initial="exit" animate="enter" exit="exit" variants={divVariants}>
+			<BlogGallery />
 		</motion.div>
 	)
 }
 
-export default Projects;
+export default Blog;

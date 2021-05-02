@@ -11,11 +11,12 @@ import {
 // framer motion configuration
 import { AnimatePresence } from 'framer-motion';
 
-
 import NavBar from './Components/Shared/NavBar/NavBar';
 import Home from './Components/Home/Home/Home';
 import Expert from './Components/Expert/Expert/Expert';
 import Projects from './Components/Projects/Projects/Projects';
+import Blog from './Components/Blog/Blog/Blog';
+import Contact from './Components/Contact/Contact/Contact';
 
 export const ChangeRouteContext = createContext();
 export const RouteLocationContext = createContext();
@@ -28,12 +29,9 @@ function App() {
     let scale = 1;
     let prevScale = scale;
     scale += event.deltaY * -0.01;
-    // Restrict scale
-    // scale = Math.min(Math.max(.125, scale), 4);
 
     if (prevScale > scale) {
       setIsNext('next');
-
     } else {
       setIsNext('prev');
     }
@@ -51,6 +49,8 @@ function App() {
                     <Route exact path="/" component={Home} />
                     <Route exact path="/expertise" component={Expert} />
                     <Route exact path="/projects" component={Projects} />
+                    <Route exact path="/blog" component={Blog} />
+                    <Route exact path="/contact" component={Contact} />
                   </Switch>
                 </AnimatePresence>
               )}

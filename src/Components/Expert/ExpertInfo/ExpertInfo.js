@@ -17,34 +17,36 @@ function ExpertInfo() {
 				</p>
 			</div>
 
-			<div className="skillHolder">
-				<div className="skill">
-					<h3>WEB DESIGN</h3>
-					<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
-				</div>
-				<div className="skill">
-					<h3>GRAPHIC DESIGN</h3>
-					<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
-				</div>
-				<div className="skill">
-					<h3>
-						DEVELOPMENT
+			<div className="infoHolder">
+				<div className="skills">
+					<div className="skill">
+						<h3>WEB DESIGN</h3>
+						<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
+					</div>
+					<div className="skill">
+						<h3>GRAPHIC DESIGN</h3>
+						<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
+					</div>
+					<div className="skill">
+						<h3>
+							DEVELOPMENT
 					</h3>
-					<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
-				</div>
-				<div className="skill">
-					<h3>
-						DIGITAL MEDIA
+						<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
+					</div>
+					<div className="skill">
+						<h3>
+							DIGITAL MEDIA
 					</h3>
-					<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
+						<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
+					</div>
 				</div>
-			</div>
-			<div className='graphHolder'>
-				<div className="graph">
-					<p className="smallPara">
-						Specialized in UI/UX
-					</p>
-					<img src={bar} alt="" />
+				<div className='graphHolder'>
+					<div className="graph">
+						<p className="smallPara">
+							Specialized in UI/UX
+						</p>
+						<img src={bar} alt="" />
+					</div>
 				</div>
 			</div>
 		</div>

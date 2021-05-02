@@ -3,33 +3,41 @@
 	color: var(--primary);
   	background-image: radial-gradient(circle, #383f4d 0%, #383f4d 10%, #1c1d21 60%);
   	height: 100%;
+  	
+  	margin-top: 5rem;
 
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-	grid-template-areas: 
-	'titleHolder titleHolder titleHolder titleHolder titleHolder titleHolder'
-	'skillHolder skillHolder skillHolder skillHolder graphHolder graphHolder';
 	align-items: center;
 	justify-content: center;
+	grid-template-rows: 1fr  1fr;
+	grid-template-areas: 
+	'titleHolder titleHolder titleHolder titleHolder titleHolder titleHolder'
+	'infoHolder infoHolder infoHolder infoHolder infoHolder infoHolder ';
 }
 
 .ExpertInfo .titleHolder {
 	grid-area: titleHolder;
 }
 
-.ExpertInfo .skillHolder {
-	grid-area: skillHolder;
+.ExpertInfo .infoHolder {
+	margin-top: -10rem;
+	grid-area: infoHolder;
+	display: flex;
+	justify-content: center;
+}
 
+.ExpertInfo .infoHolder .skills {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 50px;
+	grid-column-gap: var(--margin);
 }
 
-.ExpertInfo .graphHolder {
-	grid-area: graphHolder;
-	margin-left: 20px;
-}
-.ExpertInfo .graphHolder img{
+.ExpertInfo .infoHolder .graphHolder img {
 	width: 100%;
 }
 
+.ExpertInfo .infoHolder .graphHolder .graph {
+	margin-left: var(--margin);
+	margin-right: var(--margin);
+}

@@ -1,24 +1,26 @@
-.ProjectGallery {
+
+.BlogGallery {
 	margin-left: var(--margin);
 	color: var(--primary);
   	background-image: radial-gradient(circle, #383f4d 0%, #383f4d 10%, #1c1d21 60%);
   	height: 100%;
+  	margin-top: var(--top-margin);
 
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 	grid-template-areas: 
 	'titleHolder titleHolder titleHolder titleHolder titleHolder titleHolder'
-	'projectHolder projectHolder projectHolder projectHolder projectHolder projectHolder';
+	'blogHolder blogHolder blogHolder blogHolder blogHolder blogHolder';
 	align-items: center;
 	justify-content: center;
 }
 
-.ProjectGallery .titleHolder {
+.BlogGallery .titleHolder {
 	grid-area: titleHolder;
 }
 
-.ProjectGallery .projectHolder {
-	grid-area: projectHolder;
+.BlogGallery .blogHolder {
+	grid-area: blogHolder;
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;

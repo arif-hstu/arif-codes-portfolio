@@ -1,5 +1,4 @@
-.Expert {
+.Contact {
 	height: calc(100vh - 5rem);
 	background-color: var(--dark);
-	overflow: hidden;
 }

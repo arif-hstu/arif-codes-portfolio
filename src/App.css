@@ -1,5 +1,6 @@
 :root {
   --margin: 5%;
+  --top-margin: 10%;
 
   --primary: #ffdb6a;
   --dark: #1c1d21;
@@ -31,8 +32,23 @@ body {
   overflow: hidden;
 }
 
+body h1 {
+  font-family: var(--font-family);
+  font-size: var(--font-huge);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+body h1:first-child {
+  color: var(--white);
+  margin-bottom: -15px;
+  margin-top: -100px;
+}
+
+
 .App {
   background-color: var(--dark);
+  overflow: hidden;
 }
 
 .primaryBtn, .primaryBtn:focus {
