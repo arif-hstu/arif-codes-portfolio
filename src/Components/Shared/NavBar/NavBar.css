@@ -20,9 +20,9 @@
 	margin-left: var(--margin);
 	margin-right: var(--margin);
 	display: grid;
-	grid-template-columns: 1fr  1fr;
+	grid-template-columns: 1fr 1fr 0.1fr 1fr;
 	grid-template-areas: 
-	'logoHolder avatarHolder infoHolder';
+	'logoHolder animatedLogoHolder avatarHolder infoHolder';
 }
 
 .NavBar .logoHolder {
@@ -39,12 +39,38 @@
 	grid-area: avatarHolder;
 }
 
+.NavBar .animatedLogoHolder {
+	grid-area: animatedLogoHolder;
+	justify-self: center;
+	align-self: center;
+	width: 100%;
+
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+.NavBar .animatedLogoHolder img{
+	width: 3rem;
+	margin: auto;
+}
+
 .NavBar .logoHolder .bar {
 	justify-self: center;
 }
 
 .NavBar .logoHolder .logo > img {
 	height: 2rem;
+}
+
+.NavBar .logoHolder .logo .arrow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	width: 70%;
+	height: 80%;
+	background-color: tomato;
 }
 
 .NavBar .infoHolder {
