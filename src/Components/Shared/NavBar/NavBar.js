@@ -7,6 +7,7 @@ import speechBubble from '../../../resources/images/speech-bubble.svg';
 import avatar from '../../../resources/images/avatarPurple.svg';
 
 import { RouteLocationContext } from '../../../App';
+import Eye from '../Eye/Eye';
 
 function NavBar() {
 	const [routeLocation, setRouteLocation] = useContext(RouteLocationContext);
@@ -26,8 +27,6 @@ function NavBar() {
 		}
 	}, [routeLocation]);
 
-	console.log('[routeLocation]:', routeLocation, styleOfAvatar);
-
 	return (
 		<div className='NavBarHolder'>
 			<div className='NavBar'>
@@ -43,8 +42,9 @@ function NavBar() {
 					</div>
 				</div>
 
-				<div className="avatarHolder">
-					<img style={styleOfAvatar } src={avatar} alt="Avatar" />
+				<div style={styleOfAvatar } className="avatarHolder">
+					<img src={avatar} alt="Avatar" />
+					<Eye />
 				</div>
 
 				<div className="infoHolder">
