@@ -2,7 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import './ProjectGallery.css';
-import bar from '../../../resources/images/bar.png'
+import bar from '../../../resources/images/bar.png';
+import cleanex from '../../../resources/images/screenCleanex.png';
+import fastMart from '../../../resources/images/screenFastMart.png';
+import metroSpire from '../../../resources/images/screenMetroSpire.png';
 
 function ProjectGallery() {
 
@@ -10,8 +13,8 @@ function ProjectGallery() {
 	return (
 		<div className=" ProjectGallery">
 			<div className='titleHolder'>
-				<h1>THIS IS PROJECTS GALLERY</h1>
-				<h1>Graphic Designer</h1>
+				<h1>PORTFOLIO</h1>
+				<h1>MY RECENT WORK</h1>
 				<p className='smallPara'>
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint inventore repudiandae ipsum aliquid hic sequi
 				</p>
@@ -19,23 +22,20 @@ function ProjectGallery() {
 
 			<div className="projectHolder">
 				<div className="project">
-					<h3>WEB DESIGN</h3>
+					<h3>CLEANEX | URBAN CLEANING SERVICE <br /> MERN STACK</h3>
+					<img src={cleanex} alt=""/>
 					<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
 				</div>
 				<div className="project">
-					<h3>GRAPHIC DESIGN</h3>
-					<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
-				</div>
-				<div className="project">
-					<h3>
-						DEVELOPMENT
-					</h3>
+					<h3>FAST MART | FASTEST ONLINE SHOPPING HUB <br /> MERN STACK</h3>
+					<img src={fastMart} alt=""/>
 					<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
 				</div>
 				<div className="project">
 					<h3>
-						DIGITAL MEDIA
+						METRO SPIRE | ONLINE TICKET PURCHASING SYSTEM <br /> REACT APP
 					</h3>
+					<img src={metroSpire} alt=""/>
 					<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
 				</div>
 			</div>

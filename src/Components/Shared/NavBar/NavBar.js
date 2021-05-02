@@ -17,14 +17,20 @@ function NavBar() {
 
 	const [isOpen, setIsOpen] = useState(false);
 	const [winWidth, setWinWidth] = useState(0);
+	const [showLight, setShowLight] = useState(true);
 
 	useEffect(() => {
+		setShowLight(true);
 		const arrow = document.querySelector("#arrow");
 		window.addEventListener("mousemove", ({ clientX, clientY }) => {
 			const angle = Math.atan2(clientY, clientX);
 			arrow.style.transform = `rotate(${angle+150}rad)`;
 			arrow.style.transformOrigin = 'top left';
 		});
+
+		if (routeLocation === '/projects' || routeLocation ==='/blog') {
+			setShowLight(false);
+		}
 
 		if (routeLocation === '/' || routeLocation === '') {
 			setIsOpen(true);
@@ -52,7 +58,7 @@ function NavBar() {
 					<div className="logo">
 						<img src={logo} alt="Logo" />
 						<div className='arrow' id="arrow">
-							<img src={light} alt="" />
+							<img src={showLight && light} alt="" />
 						</div>
 					</div>
 					<div className="bar">

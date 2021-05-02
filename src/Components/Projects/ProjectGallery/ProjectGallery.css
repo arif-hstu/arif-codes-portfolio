@@ -11,16 +11,44 @@
 	'projectHolder projectHolder projectHolder projectHolder projectHolder projectHolder';
 	align-items: center;
 	justify-content: center;
+	grid-template-rows: 0.5fr 1fr;
 }
 
 .ProjectGallery .titleHolder {
 	grid-area: titleHolder;
+	margin-top: var(--top-margin);
 }
 
 .ProjectGallery .projectHolder {
 	grid-area: projectHolder;
-
+	margin-top: 2%;
+	margin-bottom: auto;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 50px;
+	grid-template-columns: repeat( auto-fit, minmax(3rem, 1fr));
+	grid-column-gap: 15px;
+	justify-content: center;
+	align-items: center;
+}
+
+.ProjectGallery .projectHolder img{
+	width: 100%;
+	max-width: 15rem;
+	min-width: 5rem;
+	min-height: 5vh;
+
+	-webkit-filter: grayscale(100%);
+	filter:  grayscale(100%) invert(70%);
+	border-radius: 5px;
+}
+
+/*.ProjectGallery .projectHolder .project {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}*/
+
+.ProjectGallery .projectHolder img:hover{
+	-webkit-filter: grayscale(0%);
+	filter:  grayscale(0%);
 }
