@@ -28,8 +28,12 @@ function NavBar() {
 			arrow.style.transformOrigin = 'top left';
 		});
 
-		if (routeLocation === '/projects' || routeLocation === '/blog' || routeLocation === '/contact') {
-			setShowLight(false);
+		if (
+			routeLocation === '/projects' || 
+			routeLocation === '/blog' || 
+			routeLocation === '/contact' ||
+			routeLocation === '/menu') {
+				setShowLight(false);
 		}
 
 		if (routeLocation === '/' || routeLocation === '') {
