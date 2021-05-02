@@ -61,6 +61,17 @@ body h1:first-child {
   outline: none;
 }
 
+#primaryBtn, #primaryBtn:focus {
+  height: 1.5rem;
+  color: var(--dark);
+  background-color: var(--primary);
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+}
+
+
 .smallPara {
   font-size: var(--font-small);
 }

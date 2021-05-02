@@ -1,11 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useForm } from 'react-hook-form';
 
 import './ContactInfo.css';
 import bar from '../../../resources/images/bar.png'
 
-function ContactInfo() { 
+function ContactInfo() {
 
+	const { register, handleSubmit, watch, formState: { errors } } = useForm();
+	const onSubmit = data => console.log(data);
+
+	console.log(watch("example"))
 
 	return (
 		<div className=" ContactInfo">
@@ -17,27 +22,21 @@ function ContactInfo() {
 				</p>
 			</div>
 
-			<div className="skillHolder">
-				<div className="skill">
-					<h3>WEB DESIGN</h3>
-					<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
-				</div>
-				<div className="skill">
-					<h3>GRAPHIC DESIGN</h3>
-					<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
-				</div>
-				<div className="skill">
-					<h3>
-						DEVELOPMENT
-					</h3>
-					<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
-				</div>
-				<div className="skill">
-					<h3>
-						DIGITAL MEDIA
-					</h3>
-					<p className='smallPara'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum quo iusto culpa! Accusantium, laboriosam?</p>
-				</div>
+			<div className="detailsHolder">
+				<form onSubmit={handleSubmit(onSubmit)}>
+					<div className="part1">
+						<input placeHolder='Name' {...register("exampleRequired", { required: true })} />
+						<input placeHolder='Contact No' {...register("exampleRequired", { required: true })} />
+						<input placeHolder='Email' {...register("exampleRequired", { required: true })} />
+					</div>
+					<div className="part2">
+						<input id='message' placeHolder='Type your message Here' {...register("exampleRequired", { required: true })} />
+					</div>
+					<div className="part3">
+						<input id='primaryBtn' type="submit" />
+						{errors.exampleRequired && <span>The field is required</span>}
+					</div>
+				</form>
 			</div>
 		</div>
 	)

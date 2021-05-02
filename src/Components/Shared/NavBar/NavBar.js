@@ -28,7 +28,7 @@ function NavBar() {
 			arrow.style.transformOrigin = 'top left';
 		});
 
-		if (routeLocation === '/projects' || routeLocation ==='/blog') {
+		if (routeLocation === '/projects' || routeLocation ==='/blog' || routeLocation ==='/contact') {
 			setShowLight(false);
 		}
 
