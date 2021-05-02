@@ -24,11 +24,11 @@ function NavBar() {
 		const arrow = document.querySelector("#arrow");
 		window.addEventListener("mousemove", ({ clientX, clientY }) => {
 			const angle = Math.atan2(clientY, clientX);
-			arrow.style.transform = `rotate(${angle+150}rad)`;
+			arrow.style.transform = `rotate(${angle + 150}rad)`;
 			arrow.style.transformOrigin = 'top left';
 		});
 
-		if (routeLocation === '/projects' || routeLocation ==='/blog' || routeLocation ==='/contact') {
+		if (routeLocation === '/projects' || routeLocation === '/blog' || routeLocation === '/contact') {
 			setShowLight(false);
 		}
 
@@ -87,9 +87,11 @@ function NavBar() {
 
 				<div className="infoHolder">
 					<div className="resume">
-						<button className='primaryBtn'>
-							RESUME
+						<a href="https://drive.google.com/uc?export=download&id=1FSc_CC53oor_h2ZJurIpxliEDHDZA0Ey">
+							<button className='primaryBtn'>
+								RESUME
 						</button>
+						</a>
 					</div>
 					<div className="hire">
 						<img src={speechBubble} alt="Message" />

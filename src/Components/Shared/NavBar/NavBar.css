@@ -68,8 +68,9 @@
 	position: absolute;
 	top: 2rem;
 	left: calc(var(--margin) + 1.5rem);
-	z-index: -1;
-	width: 70vh;
+	z-index: -10;
+	width: 45vw;
+
 }
 
 .NavBar .infoHolder {
