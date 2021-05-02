@@ -33,6 +33,7 @@
 	align-items: center;
 	justify-content: center;
 	width: 10rem;
+	z-index: 5;
 }
 
 .NavBar .avatarHolder {
@@ -65,12 +66,10 @@
 
 .NavBar .logoHolder .logo .arrow {
 	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 5;
-	width: 70%;
-	height: 80%;
-	background-color: tomato;
+	top: 2rem;
+	left: calc(var(--margin) + 1.5rem);
+	z-index: -1;
+	width: 70vh;
 }
 
 .NavBar .infoHolder {

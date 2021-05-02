@@ -6,8 +6,8 @@ import './NavBar.css';
 import logo from '../../../resources/images/logoMain.svg';
 import speechBubble from '../../../resources/images/speech-bubble.svg';
 import avatar from '../../../resources/images/avatarPurple.svg';
-import animatedLogo from '../../../resources/images/logoWIthoutEye.svg'
-import light from '../../../resources/images/light.svg'
+import animatedLogo from '../../../resources/images/logoWIthoutEye.svg';
+import light from '../../../resources/images/light.svg';
 
 import { RouteLocationContext } from '../../../App';
 import Eye from '../Eye/Eye';
@@ -17,13 +17,12 @@ function NavBar() {
 
 	const [isOpen, setIsOpen] = useState(false);
 	const [winWidth, setWinWidth] = useState(0);
-	// const [angle, setAngle] = useState(0);
 
 	useEffect(() => {
 		const arrow = document.querySelector("#arrow");
 		window.addEventListener("mousemove", ({ clientX, clientY }) => {
 			const angle = Math.atan2(clientY, clientX);
-			arrow.style.transform = `rotate(${angle}rad)`;
+			arrow.style.transform = `rotate(${angle+150}rad)`;
 			arrow.style.transformOrigin = 'top left';
 		});
 
