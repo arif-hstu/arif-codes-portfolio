@@ -8,8 +8,8 @@ import { MenuOpenContext } from '../../../App';
 
 import { motion } from 'framer-motion';
 
-function Menu({isOpen, setIsOpen}) {
-	const [ isMenuOpen, setIsMenuOpen ] = useContext(MenuOpenContext);
+function Menu() {
+	const [isMenuOpen, setIsMenuOpen] = useContext(MenuOpenContext);
 
 	const menu_variants = {
 		open: { opacity: 1, x: 0 },
@@ -19,9 +19,9 @@ function Menu({isOpen, setIsOpen}) {
 	return (
 		<div className="Menu">
 			<motion.div initial="hidden" animate={isMenuOpen ? "open" : "hidden"}>
-				<button className='primaryBtn' onClick={() => 
-					{setIsMenuOpen(!isMenuOpen);
-						setIsOpen(!isOpen)}
+				<button className='primaryBtn' onClick={() => {
+					setIsMenuOpen(!isMenuOpen);
+				}
 				}>Menu</button>
 				<motion.div className="menu-area" variants={menu_variants}>
 					<div className='linkHolder'>

@@ -41,7 +41,7 @@ function NavBar() {
 		}
 
 		if (
-			routeLocation === '/' || 
+			routeLocation === '/' ||
 			routeLocation === '') {
 			setIsOpen(true);
 			setWinWidth(window.innerWidth);
@@ -74,9 +74,7 @@ function NavBar() {
 					<div className="bar">
 						|
 					</div>
-					<div className="menu">
-						<Menu setIsOpen={isOpen, setIsOpen}/>
-					</div>
+					<Menu />
 				</div>
 
 				<motion.div
