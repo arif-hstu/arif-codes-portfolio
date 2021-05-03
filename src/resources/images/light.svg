@@ -3,10 +3,10 @@
   <defs>
     <style>.cls-1{fill:url(#linear-gradient);}</style>
     <linearGradient id="linear-gradient" x1="199.98" y1="-139.86" x2="784.99" y2="465.94" gradientUnits="userSpaceOnUse">
-      <stop offset="0.16" stop-color="#383f4d"/>
-      <stop offset="0.38" stop-color="#383f4d" stop-opacity="0.76"/>
-      <stop offset="0.81" stop-color="#383f4d" stop-opacity="0.12"/>
-      <stop offset="0.89" stop-color="#383f4d" stop-opacity="0"/>
+      <stop offset="0.16" stop-color="#ffffff"/>
+      <stop offset="0.38" stop-color="#ffffff" stop-opacity="0.76"/>
+      <stop offset="0.81" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="0.89" stop-color="#ffffff" stop-opacity="0"/>
     </linearGradient>
   </defs>
   <title>light</title>

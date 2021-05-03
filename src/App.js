@@ -17,15 +17,17 @@ import Expert from './Components/Expert/Expert/Expert';
 import Projects from './Components/Projects/Projects/Projects';
 import Blog from './Components/Blog/Blog/Blog';
 import Contact from './Components/Contact/Contact/Contact';
-import Menu from './Components/Menu/Menu';
 
 export const ChangeRouteContext = createContext();
 export const RouteLocationContext = createContext();
+export const MenuOpenContext = createContext();
 
 function App() {
   const [routeLocation, setRouteLocation] = useState('');
 
   const [isNext, setIsNext] = useState('stable');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   function changeRoute(event) {
     let scale = 1;
     let prevScale = scale;
@@ -41,6 +43,7 @@ function App() {
     <div id='App' onWheel={changeRoute} className="App">
       <ChangeRouteContext.Provider value={[isNext, setIsNext]}>
         <RouteLocationContext.Provider value={[routeLocation, setRouteLocation]}>
+        <MenuOpenContext.Provider value={[isMenuOpen, setIsMenuOpen]}>
           <Router>
             <NavBar />
             <Route
@@ -52,12 +55,12 @@ function App() {
                     <Route exact path="/projects" component={Projects} />
                     <Route exact path="/blog" component={Blog} />
                     <Route exact path="/contact" component={Contact} />
-                    <Route exact path="/menu" component={Menu} />
                   </Switch>
                 </AnimatePresence>
               )}
             />
           </Router>
+          </MenuOpenContext.Provider>
         </RouteLocationContext.Provider>
       </ChangeRouteContext.Provider>
     </div>

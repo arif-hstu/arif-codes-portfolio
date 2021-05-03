@@ -2,11 +2,11 @@
   --margin: 5%;
   --top-margin: 6rem;
 
-  --primary: #ffdb6a;
-  --dark: #1c1d21;
-  --secondary: #383f4d;
+  --primary: #195cc8;
+  --dark: #eae4d7;
+  --secondary: #eae4d7;
   --black: black;
-  --white: white;
+  --white: #195cc8;
   --light: #eae4d7;
   --tartiary: #195cc8;
   --quartarnary: white;
@@ -70,7 +70,6 @@ body h1:first-child {
   border-radius: 3px;
   outline: none;
 }
-
 
 .smallPara {
   font-size: var(--font-small);

@@ -4,7 +4,7 @@
 
 .NavBarHolder .avatarHolder {
 	position: absolute;
-	z-index: 999;
+	z-index: 99;
 	right: var(--margin);
 	top: 20vh;
 }

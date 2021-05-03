@@ -10,10 +10,14 @@ import animatedLogo from '../../../resources/images/logoWIthoutEye.svg';
 import light from '../../../resources/images/light.svg';
 
 import { RouteLocationContext } from '../../../App';
+import { MenuOpenContext } from '../../../App';
+
 import Eye from '../Eye/Eye';
+import Menu from '../../Menu/Menu/Menu';
 
 function NavBar() {
 	const [routeLocation, setRouteLocation] = useContext(RouteLocationContext);
+	const [isMenuOpen, setIsMenuOpen] = useContext(MenuOpenContext);
 
 	const [isOpen, setIsOpen] = useState(false);
 	const [winWidth, setWinWidth] = useState(0);
@@ -29,21 +33,23 @@ function NavBar() {
 		});
 
 		if (
-			routeLocation === '/projects' || 
-			routeLocation === '/blog' || 
-			routeLocation === '/contact' ||
-			routeLocation === '/menu') {
-				setShowLight(false);
+			isMenuOpen ||
+			routeLocation === '/projects' ||
+			routeLocation === '/blog' ||
+			routeLocation === '/contact') {
+			setShowLight(false);
 		}
 
-		if (routeLocation === '/' || routeLocation === '') {
+		if (
+			routeLocation === '/' || 
+			routeLocation === '') {
 			setIsOpen(true);
 			setWinWidth(window.innerWidth);
 		} else {
 			setIsOpen(false);
 			setWinWidth(window.innerWidth);
 		}
-	}, [routeLocation, window.innerWidth]);
+	}, [routeLocation, window.innerWidth, isMenuOpen]);
 
 	const variants = {
 		open: { scale: 1, opacity: 1, x: 0 },
@@ -69,7 +75,7 @@ function NavBar() {
 						|
 					</div>
 					<div className="menu">
-						<p>MENU</p>
+						<Menu setIsOpen={isOpen, setIsOpen}/>
 					</div>
 				</div>
 
@@ -81,6 +87,7 @@ function NavBar() {
 					<img src={avatar} alt="Avatar" />
 					<Eye />
 				</motion.div>
+
 				<motion.div
 					className='animatedLogoHolder'
 					animate={!isOpen ? 'open' : 'closed'}
