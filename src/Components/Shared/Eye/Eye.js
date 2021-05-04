@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './Eye.css';
 function Eye() {
 	const [dimensions, setDimensions] = useState({
-		height: window.innerHeight,
 		width: window.innerWidth
 	})
 
 	useEffect(() => {
 		function handleResize() {
 			setDimensions({
-				height: window.innerHeight,
 				width: window.innerWidth
 			})
 		}
@@ -35,8 +33,12 @@ function Eye() {
 		let ball = document.querySelectorAll(".ball");
 
 		for (var i = 0; i < 2; i++) {
-			ball[i].style.top = yh * 0.3 + 60 + "%";
-			ball[i].style.left = xw * 0.2 + 40 + "%";
+			ball[i].style.top = yh * 0.3 + 65 + "%";
+			ball[i].style.left = xw * 0.2 + 25 + "%";
+
+			// ball[i].style.top = yh * 0.3 + 60 + "%";
+			// ball[i].style.left = xw * 0.2 + 40 + "%";
+
 			ball[i].style.transition = "(-50%, -50%)";
 		}
 	});
