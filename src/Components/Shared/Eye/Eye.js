@@ -1,6 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Eye.css';
 function Eye() {
+	const [dimensions, setDimensions] = useState({
+		height: window.innerHeight,
+		width: window.innerWidth
+	})
+
+	useEffect(() => {
+		function handleResize() {
+			setDimensions({
+				height: window.innerHeight,
+				width: window.innerWidth
+			})
+		}
+		window.addEventListener('resize', handleResize);
+
+	}, []);
 
 	let doc = document.documentElement;
 	let clientHeight = doc.clientHeight;
@@ -26,14 +41,19 @@ function Eye() {
 		}
 	});
 
-
 	return (
-		<div className="Eye">
+		<div id={dimensions.width} className="Eye">
 			<div>
-				<div className="ball" />
+				<div
+					style={{ left: '65%', top: '95%' }}
+					className="ball"
+				/>
 			</div>
 			<div>
-				<div className="ball" />
+				<div
+					style={{ left: '65%', top: '95%' }}
+					className="ball"
+				/>
 			</div>
 		</div>
 	)
