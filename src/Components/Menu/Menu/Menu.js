@@ -19,17 +19,14 @@ function Menu() {
 	return (
 		<div className="Menu">
 			<motion.div initial="hidden" animate={isMenuOpen ? "open" : "hidden"}>
-				<button className='primaryBtn' onClick={() => {
-					setIsMenuOpen(!isMenuOpen);
-				}
-				}>Menu</button>
+				<button className='primaryBtn' onClick={() => setIsMenuOpen(!isMenuOpen)}>Menu</button>
 				<motion.div className="menu-area" variants={menu_variants}>
 					<div className='linkHolder'>
-						<Link to='/'>Home</Link>
-						<Link to='/expertise'>Expertise</Link>
-						<Link to='/projects'>Projects</Link>
-						<Link to='/blog'>Blog</Link>
-						<Link to='/blog'>Contact Me</Link>
+						<Link onClick={() => setIsMenuOpen(!isMenuOpen)} to='/'>Home</Link>
+						<Link onClick={() => setIsMenuOpen(!isMenuOpen)} to='/expertise'>Expertise</Link>
+						<Link onClick={() => setIsMenuOpen(!isMenuOpen)}to='/projects'>Projects</Link>
+						<Link onClick={() => setIsMenuOpen(!isMenuOpen)}to='/blog'>Blog</Link>
+						<Link onClick={() => setIsMenuOpen(!isMenuOpen)}to='/contact'>Contact Me</Link>
 					</div>
 				</motion.div>
 			</motion.div>

@@ -34,7 +34,7 @@
 	align-items: center;
 	justify-content: center;
 	width: 10rem;
-	z-index: 5;
+	z-index: 990;
 }
 
 .NavBar .avatarHolder {
@@ -50,6 +50,7 @@
 	display: grid;
 	justify-content: center;
 	align-items: center;
+	z-index: 998
 }
 
 .NavBar .animatedLogoHolder img{
@@ -82,6 +83,7 @@
 	align-items: center;
 	justify-content: center;
 	width: 15rem;
+	z-index: 998;
 }
 
 .NavBar .infoHolder > * {
@@ -100,4 +102,14 @@
 
 .NavBar .infoHolder img {
 	margin-right: 5px;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.NavBarHolder .avatarHolder {
+		position: absolute;
+		z-index: 99;
+		right: 22%;
+		top: 45vh;
+	}
 }

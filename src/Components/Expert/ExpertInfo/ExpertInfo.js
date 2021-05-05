@@ -10,7 +10,7 @@ function ExpertInfo() {
 	return (
 		<div className=" ExpertInfo">
 			<div className='titleHolder'>
-				<h1>Enthusiastic Front-End Web Developer</h1>
+				<h1>Front-End Web Developer</h1>
 				<h1>Graphic Designer</h1>
 				<p className='smallPara'>
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint inventore repudiandae ipsum aliquid hic sequi

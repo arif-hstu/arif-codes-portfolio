@@ -2,7 +2,6 @@
 	margin-left: var(--margin);
 	color: var(--primary);
   	background-image: var(--primary);
-  	/*background-image: radial-gradient(circle, #383f4d 0%, #383f4d 10%, #1c1d21 60%);*/
   	height: 100%;
   	
   	margin-top: 5rem;
@@ -22,7 +21,7 @@
 }
 
 .ExpertInfo .infoHolder {
-	margin-top: -10rem;
+	margin-top: -20rem;
 	grid-area: infoHolder;
 	display: flex;
 	justify-content: center;
@@ -41,4 +40,27 @@
 .ExpertInfo .infoHolder .graphHolder .graph {
 	margin-left: var(--margin);
 	margin-right: var(--margin);
+}
+
+@media only screen and (max-width: 768px) {
+	.ExpertInfo {
+		margin-left: var(--margin);
+		margin-right: var(--margin);
+ 		margin-top: 0rem;
+	}
+
+	.ExpertInfo .titleHolder {
+		text-align: center;
+	}
+
+	.ExpertInfo .infoHolder {
+		grid-area: infoHolder;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.ExpertInfo .infoHolder .graphHolder .graph .smallPara{
+		text-align: center;
+	}
 }
