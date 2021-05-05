@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { motion } from "framer-motion"
 
 import './NavBar.css';
@@ -66,7 +66,7 @@ function NavBar() {
 			<div className='NavBar'>
 				<div className="logoHolder">
 					<div className="logo">
-						<img src={logo} alt="Logo" />
+						<Link to='/'><img src={logo} alt="Logo" /></Link>
 						<div className='arrow' id="arrow">
 							<img src={showLight && light} alt="" />
 						</div>
@@ -103,8 +103,10 @@ function NavBar() {
 						</a>
 					</div>
 					<div className="hire">
-						<img src={speechBubble} alt="Message" />
-						<p>HIRE ME</p>
+						<Link to='/contact'>
+							<img src={speechBubble} alt="Message" />
+							<p>HIRE ME</p>
+						</Link>
 					</div>
 				</div>
 			</div>
