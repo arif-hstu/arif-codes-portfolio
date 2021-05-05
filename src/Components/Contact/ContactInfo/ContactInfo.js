@@ -3,7 +3,11 @@ import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
 
 import './ContactInfo.css';
-import bar from '../../../resources/images/bar.png'
+import bar from '../../../resources/images/bar.png';
+import github from '../../../resources/icons/github.svg';
+import linkedIn from '../../../resources/icons/linkedin.svg';
+import facebook from '../../../resources/icons/facebook.svg';
+import twitter from '../../../resources/icons/twitter.svg';
 
 function ContactInfo() {
 
@@ -37,6 +41,14 @@ function ContactInfo() {
 						{errors.exampleRequired && <span>The field is required</span>}
 					</div>
 				</form>
+			</div>
+			<div className="socialIcons">
+				<div className="icons">
+					<a target='_blank' href="https://github.com/arif-hstu"><img src={github} alt="GitHub" /></a>
+					<a target='_blank' href="https://www.linkedin.com/in/arif-hstu"><img src={linkedIn} alt="LinkedIn" /></a>
+					<a target='_blank' href="https://facebook.com/arifhstu"><img src={facebook} alt="Facebook" /></a>
+					<a href="#"><img src={twitter} alt="Twitter" /></a>
+				</div>
 			</div>
 		</div>
 	)
