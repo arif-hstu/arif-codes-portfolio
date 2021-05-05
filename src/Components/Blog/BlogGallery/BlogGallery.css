@@ -47,7 +47,6 @@
 	filter:  grayscale(0%);
 }
 
-
 @media only screen and (max-width: 768px) {
 	.BlogGallery {
 		margin-right: var(--margin);
@@ -55,4 +54,14 @@
 	.BlogGallery .titleHolder {
 		text-align: center;
 	}
+	.BlogGallery .blogHolder .imageHolder{
+		width: 10rem;
+	}
 }
+
+@media only screen and (max-width: 600px) {
+	.BlogGallery .blogHolder .imageHolder{
+		width: 8rem;
+	}
+}
+

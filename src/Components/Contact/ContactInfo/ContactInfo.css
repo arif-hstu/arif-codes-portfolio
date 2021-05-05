@@ -61,12 +61,8 @@
 
 .ContactInfo .detailsHolder form .part2{
 	grid-area: part2;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
 }
-.ContactInfo .detailsHolder form .part2 input{
+.ContactInfo .detailsHolder form .part2 #message{
 	width: 100%;
 	height: 100%;
 }
@@ -74,7 +70,6 @@
 .ContactInfo .detailsHolder form .part3{
 	grid-area: part3;
 }
-
 
 .ContactInfo .detailsHolder form .part3 input {
 	margin-top: 2rem;
@@ -87,6 +82,24 @@
 	}
 	.ContactInfo .titleHolder {
 		text-align: center;
+	}
+
+	.ContactInfo .detailsHolder form {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-column-gap: 2rem;
+		grid-template-areas: 
+		'part1 part1'
+		'part2 parti2'
+		'part3 part3';
+	}
+	.ContactInfo .detailsHolder form .part2  {
+		margin-top: 2rem;
+	}
+	.ContactInfo .detailsHolder form .part2 #message{
+		width: 106%;
+		height: 3rem;
 	}
 
 }

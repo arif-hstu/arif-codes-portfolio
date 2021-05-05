@@ -12,6 +12,10 @@
   background-image: var(--primary);
 }
 
+.Intro h1{
+	font-size: calc(var(--font-huge) * 1.5);
+}
+
 @media only screen and (max-width: 768px) {
 	.Intro {
 		display: grid;
@@ -19,5 +23,8 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
+	}
+	.Intro h1{
+		font-size: var(--font-huge);
 	}
 }
