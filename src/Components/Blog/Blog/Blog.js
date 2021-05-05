@@ -27,16 +27,16 @@ function Blog() {
 	}, [isNext]);
 
 	const transition = {
-		duration: 1,
+		duration: 0.2,
 		ease: [0.43, 0.13, 0.23, 0.96]
 	};
 	const transition2 = {
-		duration: 1,
+		duration: 0.2,
 		ease: [0.43, 0.13, 0.23, 0.96]
 	};
 
 	const divVariants = {
-		exit: { opacity: 0, transition },
+		exit: { y: '-100%', opacity: 1, transition },
 		enter: {
 			y: "0%",
 			opacity: 1,

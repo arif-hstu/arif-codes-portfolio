@@ -76,7 +76,6 @@ function NavBar() {
 					</div>
 					<Menu />
 				</div>
-
 				<motion.div
 					className="avatarHolder"
 					animate={isOpen ? 'open' : 'closed'}
@@ -84,6 +83,7 @@ function NavBar() {
 				>
 					<img src={avatar} alt="Avatar" />
 					<Eye />
+
 				</motion.div>
 
 				<motion.div
