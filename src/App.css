@@ -2,11 +2,11 @@
   --margin: 5%;
   --top-margin: 6rem;
 
-  --primary: #195cc8;
-  --dark: #eae4d7;
+  --primary: #fff;
+  --dark: #020312;
   --secondary: #eae4d7;
   --black: black;
-  --white: #195cc8;
+  --white: #f26c4f;
   --light: #eae4d7;
   --tartiary: #195cc8;
   --quartarnary: white;
@@ -75,3 +75,11 @@ body h1:first-child {
   font-size: var(--font-small);
 }
 
+
+
+/*color: 
+background: #020312
+card: #090c17
+button first: #f26c4f;
+text color: white;
+*/
