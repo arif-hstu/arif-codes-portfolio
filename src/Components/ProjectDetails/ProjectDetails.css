@@ -1,11 +1,11 @@
-.Project {
+.ProjectDetails {
 	width: 100vw;
 	height: 100vh;
 	/*background-color: #ba94de;*/
 
 	display: grid;
 	grid-template-columns: 0.2fr 1fr 0.2fr;
-	grid-template-rows: 1fr 0.2fr;
+	grid-template-rows: 1fr 0.05fr;
 	grid-template-areas: 
 	'leftSide middlePart rightSide'
 	'bottomPart bottomPart bottomPart';
@@ -13,7 +13,7 @@
 	align-items: center;
 }
 
-.Project .leftSide {
+.ProjectDetails .leftSide {
 	grid-area: leftSide;
 	text-align: center;
 	display: grid;
@@ -23,17 +23,17 @@
 	align-items: center;
 }
 
-.Project .middlePart {
+.ProjectDetails .middlePart {
 	margin-left: 10%;
 	margin-right: 10%;
-
+	margin-top: -10%;
 	grid-area: middlePart;
 	height: 50vh;
 
 	display: flex;
 	flex-direction: column;
 }
-.Project .middlePart .title{
+.ProjectDetails .middlePart .title{
 	margin-top: auto;
 	color: white;
 	text-align: center;
@@ -41,65 +41,62 @@
 	font-weight: 700;
 }
 
-.Project .middlePart .scroll{
+.ProjectDetails .middlePart .scroll{
 	box-shadow: 0 15px 40px rgba(0,0,0,0.7);
 }
 
-.Project .middlePart .crossHolder {
+
+.ProjectDetails .middlePart .crossHolder {
 	margin-top: -5rem;
 	display: flex;
 	justify-content: center;
 }
 
-.Project .middlePart .crossHolder img{
+.ProjectDetails .middlePart .crossHolder img{
 	width: 1.5rem;
-	border: 3px solid white;
+	border: 3px solid #e32f4e;
 	padding: 8px;
 	border-radius: 50%;
 }
 
 
-.Project .middlePart img{
+.ProjectDetails .middlePart .scroll {
 	width: 100%;
 }
 
-.Project .middlePart .scroll {
-	width: 100%;
-}
-
-.Project .rightSide {
+.ProjectDetails .rightSide {
 	grid-area: rightSide;
 	text-align: center;
 }
 
-.Project .bottomPart {
+.ProjectDetails .bottomPart {
 	grid-area: bottomPart;
 	display: flex;
 	justify-content: center;
 }
 
-.Project .first,
-.Project .second,
-.Project .third {
+.ProjectDetails .first,
+.ProjectDetails .second,
+.ProjectDetails .third {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-.Project .first,
-.Project .second ,
-.Project .third {
+.ProjectDetails .first,
+.ProjectDetails .second ,
+.ProjectDetails .third {
 	height:5rem;
 }
 
-.Project .first > img,
-.Project .second > img,
-.Project .third > img{
+.ProjectDetails .first > img,
+.ProjectDetails .second > img,
+.ProjectDetails .third > img{
 	width: 2rem;
 }
 
-.Project .rightSide .second .details{
+.ProjectDetails .rightSide .second .details{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -109,19 +106,16 @@
 	height: 5rem;
 }
 
-.Project .rightSide .second .details p > *{
-	text-decoration: none;
-}
-
-.Project .bottomPart .bottomHolder {
+.ProjectDetails .bottomPart .bottomHolder {
 	width: 50%;
 }
 
-.Project .bottomPart .bottom{
+.ProjectDetails .bottomPart .bottom{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	color: white;
 	font-weight: 500;
 }
+
 
