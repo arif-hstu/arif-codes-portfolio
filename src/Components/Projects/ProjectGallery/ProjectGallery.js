@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import './ProjectGallery.css';
@@ -10,6 +10,7 @@ import metroSpire from '../../../resources/images/screenMetroSpire.png';
 import zoomIn from '../../../resources/icons/zoomIn.svg';
 
 function ProjectGallery() {
+	const history = useHistory();
 	const [projectType, setProjectType] = useState('mern');
 	const [underline, setUnderline] = useState(false);
 
@@ -22,7 +23,9 @@ function ProjectGallery() {
 		borderBottom: '3px solid var(--white)'
 	}
 
-	console.log(location.hash)
+	useEffect({
+		
+	})
 
 	return (
 		<div className=" ProjectGallery">
@@ -35,10 +38,10 @@ function ProjectGallery() {
 			</div>
 
 			<div className="filterHolder">
-				<Link to='#mern' onClick={() => { filterType('mern') }} className="filter filter1"><span>MERN Stack</span></Link>
-				<Link onClick={() => { filterType('react') }} className="filter filter2">React App</Link>
-				<Link onClick={() => { filterType('javascript') }} className="filter filter3">Javascript</Link>
-				<Link onClick={() => { filterType('vue') }} className="filter filter4">Vue</Link>
+				<Link style = {filterStyle} to='#mern' onClick={() => { filterType('mern') }} className="filter filter1"><span>MERN Stack</span></Link>
+				<Link to='#react' onClick={() => { filterType('react') }} className="filter filter2">React App</Link>
+				<Link to='#javascript' onClick={() => { filterType('javascript') }} className="filter filter3">Javascript</Link>
+				<Link to='#vue' onClick={() => { filterType('vue') }} className="filter filter4">Vue</Link>
 			</div>
 
 			<div className="projectHolder">
