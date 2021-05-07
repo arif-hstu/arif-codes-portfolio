@@ -1,7 +1,7 @@
 .Project {
 	width: 100vw;
 	height: 100vh;
-	background-color: #ba94de;
+	/*background-color: #ba94de;*/
 
 	display: grid;
 	grid-template-columns: 0.2fr 1fr 0.2fr;
@@ -16,11 +16,21 @@
 .Project .leftSide {
 	grid-area: leftSide;
 	text-align: center;
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 0.5rem;
+	justify-content: center;
+	align-items: center;
 }
 
 .Project .middlePart {
 	grid-area: middlePart;
 	text-align: center;
+	height: 70vh;
+	display: grid;
+	grid-template-rows: 1fr 0.1fr;
+	background-color: darkOrange;
+	align-items: center;
 }
 
 .Project .rightSide {
@@ -32,3 +42,35 @@
 	grid-area: bottomPart;
 	text-align: center;
 }
+
+.Project .first,
+.Project .second,
+.Project .third {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.Project .first,
+.Project .second ,
+.Project .third {
+	height:5rem;
+}
+
+.Project .first > img,
+.Project .second > img,
+.Project .third > img{
+	width: 30%;
+}
+
+.Project .rightSide .second .details{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+	border-radius: 50%;
+	width: 5rem;
+	height: 5rem;
+}
+
