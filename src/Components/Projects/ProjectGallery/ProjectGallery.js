@@ -23,9 +23,11 @@ function ProjectGallery() {
 		borderBottom: '3px solid var(--white)'
 	}
 
-	useEffect({
-		
-	})
+	const noFilterStyle = {
+		borderBottom: 'none'
+	}
+
+	console.log(projectType);
 
 	return (
 		<div className=" ProjectGallery">
@@ -38,22 +40,22 @@ function ProjectGallery() {
 			</div>
 
 			<div className="filterHolder">
-				<Link style = {filterStyle} to='#mern' onClick={() => { filterType('mern') }} className="filter filter1"><span>MERN Stack</span></Link>
-				<Link to='#react' onClick={() => { filterType('react') }} className="filter filter2">React App</Link>
-				<Link to='#javascript' onClick={() => { filterType('javascript') }} className="filter filter3">Javascript</Link>
-				<Link to='#vue' onClick={() => { filterType('vue') }} className="filter filter4">Vue</Link>
+				<Link style={projectType==='mern' && filterStyle || noFilterStyle} to='#mern' onClick={() => { filterType('mern') }} className="filter filter1"><span>MERN Stack</span></Link>
+				<Link style={projectType==='react' && filterStyle || noFilterStyle} to='#react' onClick={() => { filterType('react') }} className="filter filter2">React App</Link>
+				<Link style={projectType==='javascript' && filterStyle || noFilterStyle}  to='#javascript' onClick={() => { filterType('javascript') }} className="filter filter3">Javascript</Link>
+				<Link style={projectType==='vue' && filterStyle || noFilterStyle}  to='#vue' onClick={() => { filterType('vue') }} className="filter filter4">Vue</Link>
 			</div>
 
 			<div className="projectHolder">
 				{
 					projectType === 'mern' &&
 					<>
-						<div className="project">
+						<div onClick={()=>history.push('/project/mern/1')} className="project">
 							<img src={cleanex} alt="" className='projectImg' />
 							<img src={zoomIn} alt="" className="icon" />
 							<a className="title smallPara">Cleanex | Service Website</a>
 						</div>
-						<div className="project">
+						<div onClick={()=>history.push('/project/mern/2')} className="project">
 							<img src={fastMart} alt="" className='projectImg' />
 							<img src={zoomIn} alt="" className="icon" />
 							<a className="title smallPara">FastMart | Online Shopping Hub </a>
@@ -63,17 +65,17 @@ function ProjectGallery() {
 				{
 					projectType === 'react' &&
 					<>
-						<div className="project">
+						<div onClick={()=>history.push('/project/react/1')} className="project">
 							<img src={metroSpire} alt="" className='projectImg' />
 							<img src={zoomIn} alt="" className="icon" />
 							<a className="title smallPara">Cleanex | Service Website</a>
 						</div>
-						<div className="project">
+						<div onClick={()=>history.push('/project/react/2')} className="project">
 							<img src={cleanex} alt="" className='projectImg' />
 							<img src={zoomIn} alt="" className="icon" />
 							<a className="title smallPara">Cleanex | Service Website</a>
 						</div>
-						<div className="project">
+						<div onClick={()=>history.push('/project/react/3')} className="project">
 							<img src={metroSpire} alt="" className='projectImg' />
 							<img src={zoomIn} alt="" className="icon" />
 							<a className="title smallPara">Cleanex | Service Website</a>
@@ -83,7 +85,7 @@ function ProjectGallery() {
 				{
 					projectType === 'javascript' &&
 					<>
-						<div className="project">
+						<div onClick={()=>history.push('/project/javascript/1')} className="project">
 							<img src={fastMart} alt="" className='projectImg' />
 							<img src={zoomIn} alt="" className="icon" />
 							<a className="title smallPara">Cleanex | Service Website</a>

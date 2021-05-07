@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory, Link, useParams } from 'react-router-dom';
 import { motion } from "framer-motion"
 
 import './NavBar.css';
@@ -16,6 +16,8 @@ import Eye from '../Eye/Eye';
 import Menu from '../../Menu/Menu/Menu';
 
 function NavBar() {
+	const history = useHistory();
+
 	const [routeLocation, setRouteLocation] = useContext(RouteLocationContext);
 	const [isMenuOpen, setIsMenuOpen] = useContext(MenuOpenContext);
 
@@ -62,7 +64,7 @@ function NavBar() {
 	}
 
 	return (
-		<div className='NavBarHolder'>
+		<div hidden={history.location.pathname.slice(0, 9) === '/project/'} className='NavBarHolder'>
 			<div className='NavBar'>
 				<div className="logoHolder">
 					<div className="logo">

@@ -12,7 +12,7 @@ function Intro() {
 					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint inventore repudiandae ipsum aliquid hic sequi
 				</p>
 			</div>
-			<div claaName='part2'>
+			<div className='part2'>
 
 			</div>
 		</div>

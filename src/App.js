@@ -17,6 +17,7 @@ import Expert from './Components/Expert/Expert/Expert';
 import Projects from './Components/Projects/Projects/Projects';
 import Blog from './Components/Blog/Blog/Blog';
 import Contact from './Components/Contact/Contact/Contact';
+import Project from './Components/Project/Project';
 
 export const ChangeRouteContext = createContext();
 export const RouteLocationContext = createContext();
@@ -55,6 +56,7 @@ function App() {
                     <Route exact path="/projects" component={Projects} />
                     <Route exact path="/blog" component={Blog} />
                     <Route exact path="/contact" component={Contact} />
+                    <Route exact path="/project/:type/:id" component={Project} />
                   </Switch>
                 </AnimatePresence>
               )}
