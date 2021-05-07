@@ -54,7 +54,7 @@ body h1:first-child {
 .primaryBtn, .primaryBtn:focus {
   height: 1.5rem;
   color: var(--dark);
-  background-color: var(--primary);
+  background-color: var(--white);
   cursor: pointer;
   border: none;
   border-radius: 3px;
