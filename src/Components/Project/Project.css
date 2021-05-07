@@ -1,3 +1,34 @@
 .Project {
-	background-color: orange;
+	width: 100vw;
+	height: 100vh;
+	background-color: #ba94de;
+
+	display: grid;
+	grid-template-columns: 0.2fr 1fr 0.2fr;
+	grid-template-rows: 1fr 0.05fr;
+	grid-template-areas: 
+	'leftSide middlePart rightSide'
+	'bottomPart bottomPart bottomPart';
+	justify-content: center;
+	align-items: center;
+}
+
+.Project .leftSide {
+	grid-area: leftSide;
+	text-align: center;
+}
+
+.Project .middlePart {
+	grid-area: middlePart;
+	text-align: center;
+}
+
+.Project .rightSide {
+	grid-area: rightSide;
+	text-align: center;
+}
+
+.Project .bottomPart {
+	grid-area: bottomPart;
+	text-align: center;
 }
