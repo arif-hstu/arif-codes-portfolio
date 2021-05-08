@@ -43,16 +43,15 @@
 
 .ExpertInfo .infoHolder .skills .skill {
 	background-color: #222330; 
-	/*background-color: var(--white);*/
 	padding: 1rem;
 	border-radius: 8px;
 }
 
 .ExpertInfo .infoHolder .skills .skill:last-child {
-	margin-right: calc(var(--margin) *-1)
+	margin-right: calc(var(--margin) * -1);
 }
 .ExpertInfo .infoHolder .skills .skill:nth-child(3) {
-	margin-right: calc(var(--margin) *-1)
+	margin-right: calc(var(--margin) * -1);
 
 }
 

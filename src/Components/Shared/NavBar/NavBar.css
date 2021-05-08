@@ -21,7 +21,7 @@
 	margin-left: var(--margin);
 	margin-right: var(--margin);
 	display: grid;
-	grid-template-columns: 1fr 1fr 0.1fr 1fr;
+	grid-template-columns: 1fr 1fr 0.01fr 1fr;
 	grid-template-areas: 
 	'logoHolder animatedLogoHolder avatarHolder infoHolder';
 }
@@ -55,7 +55,7 @@
 
 .NavBar .animatedLogoHolder img{
 	width: 3rem;
-	margin: auto;
+	margin-left: 60%;
 }
 
 .NavBar .logoHolder .bar {
@@ -72,7 +72,6 @@
 	left: calc(var(--margin) + 1.5rem);
 	z-index: -10;
 	width: 45vw;
-
 }
 
 .NavBar .infoHolder {
