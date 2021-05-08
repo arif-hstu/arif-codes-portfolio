@@ -27,11 +27,11 @@ function Blog() {
 	}, [isNext]);
 
 	const transition = {
-		duration: 0.2,
+		duration: 0.3,
 		ease: [0.43, 0.13, 0.23, 0.96]
 	};
 	const transition2 = {
-		duration: 0.2,
+		duration: 0.3,
 		ease: [0.43, 0.13, 0.23, 0.96]
 	};
 

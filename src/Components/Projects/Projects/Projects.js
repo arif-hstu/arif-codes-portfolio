@@ -27,16 +27,16 @@ function Projects() {
 	}, [isNext]);
 
 	const transition = {
-		duration: 0.2,
-		ease: [0.43, 0.13, 0.23, 0.96]
+		duration: 0.3,
+		ease: [0.17, 0.67, 0.83, 0.67]
 	};
 	const transition2 = {
-		duration: 0.2,
-		ease: [0.43, 0.13, 0.23, 0.96]
+		duration: 0.3,
+		ease: [0.17, 0.67, 0.83, 0.67]
 	};
 
 	const divVariants = {
-		exit: { y: '-100%', opacity: 1, transition },
+		exit: { y: '-100%', opacity: 0, transition },
 		enter: {
 			y: "0%",
 			opacity: 1,

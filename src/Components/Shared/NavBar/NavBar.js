@@ -55,7 +55,7 @@ function NavBar() {
 
 	const variants = {
 		open: { scale: 1, opacity: 1, x: 0 },
-		closed: { scale: 0.3, opacity: 0, x: `-${winWidth / 3}px`, y: '-80%' },
+		closed: { scale: 0.3, opacity: 0, x: `-${winWidth / 4}px`, y: '-90%' },
 	}
 
 	const variantsFade = {
