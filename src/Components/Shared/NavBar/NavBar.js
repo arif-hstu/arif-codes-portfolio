@@ -97,14 +97,14 @@ function NavBar() {
 				</motion.div>
 
 				<div className="infoHolder">
-					<div className="resume">
+					<div  hidden={isMenuOpen}  className="resume">
 						<a href="https://drive.google.com/uc?export=download&id=1FSc_CC53oor_h2ZJurIpxliEDHDZA0Ey">
 							<button className='primaryBtn'>
 								RESUME
 						</button>
 						</a>
 					</div>
-					<div className="hire">
+					<div  hidden={isMenuOpen} className="hire">
 						<Link to='/contact'>
 							<img src={speechBubble} alt="Message" />
 							<p>HIRE ME</p>

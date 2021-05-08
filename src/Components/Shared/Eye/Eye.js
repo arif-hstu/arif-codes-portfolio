@@ -45,13 +45,13 @@ function Eye() {
 
 	return (
 		<div id={dimensions.width} className="Eye">
-			<div>
+			<div className='first'>
 				<div
 					style={{ left: '65%', top: '95%' }}
 					className="ball"
 				/>
 			</div>
-			<div>
+			<div className='second'>
 				<div
 					style={{ left: '65%', top: '95%' }}
 					className="ball"

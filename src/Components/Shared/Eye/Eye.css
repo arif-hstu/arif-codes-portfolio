@@ -25,6 +25,30 @@
   right: -30%;
 }
 
+.Eye .second {
+  width: 25px;
+  height: 9.5px;
+  margin: 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  top: -9.5%;
+  right: -30%;
+  transform: rotate(-4deg);
+}
+
+.Eye .first {
+  width: 25px;
+  height: 10px;
+  margin: 18px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  top: -10%;
+  right: -30%;
+  transform: rotate(4deg);
+}
+
 .ball {
   width: 5px;
   height: 5px;
