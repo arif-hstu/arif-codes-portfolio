@@ -51,20 +51,13 @@ body h1:first-child {
   overflow: hidden;
 }
 
-.primaryBtn, .primaryBtn:focus {
+.primaryBtn, 
+.primaryBtn:focus,
+#primaryBtn, 
+#primaryBtn:focus {
   height: 1.5rem;
   color: var(--dark);
   background-color: var(--white);
-  cursor: pointer;
-  border: none;
-  border-radius: 3px;
-  outline: none;
-}
-
-#primaryBtn, #primaryBtn:focus {
-  height: 1.5rem;
-  color: var(--dark);
-  background-color: var(--primary);
   cursor: pointer;
   border: none;
   border-radius: 3px;
